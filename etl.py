@@ -3,17 +3,6 @@ import os
 import glob
 from sqlalchemy import create_engine
 import time
-import subprocess
-
-def download_dataset():
-    download_cmd = "kaggle datasets download -d nosbielcs/brazilian-delivery-center -p /app/dataset --unzip"
-    
-    try:
-        subprocess.run(download_cmd, shell=True, check=True)
-        print("Dataset baixado com sucesso")
-    except subprocess.CalledProcessError as e:
-        print(f"Erro ao baixar dataset: {e}")
-        raise
 
 def main():
     # Setup para conexão com o banco de dados
@@ -22,9 +11,6 @@ def main():
     dbname = "delivery_center"
     host = "db"
     port = 5432
-
-    # Baixar dataset
-    download_dataset()
 
     # Esperar devida configuração do Postgres para conectar
     while True:

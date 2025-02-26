@@ -7,6 +7,7 @@ services:
       POSTGRES_PASSWORD: postgrespass
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./dataset:/dataset
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres -d delivery_center"]
       interval: 5s
@@ -16,13 +17,10 @@ services:
       - db-network
 
   etl:
-    build: .
+    build: . # busca um Dockerfile no diretório especificado
     depends_on:
       db:
         condition: service_healthy
-    environment:
-      KAGGLE_USERNAME: ${KAGGLE_USERNAME}
-      KAGGLE_KEY: ${KAGGLE_KEY}
     volumes:
       - ./dataset:/app/dataset
     networks:
