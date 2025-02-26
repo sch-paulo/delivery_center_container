@@ -1,3 +1,11 @@
+<<<<<<< HEAD
 poetry.lock
 pyproject.toml
 connection.txt
+=======
+dataset/
+.venv/
+kaggle/
+poetry.lock
+pyproject.toml
+>>>>>>> temp-fix
