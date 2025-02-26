@@ -70,3 +70,35 @@ Um a cada oito lojistas apresentam um índice de entregas não realizadas acima 
 
 #### 10. Qual o ranking dos top 10 lojistas com mais pedidos em cada canal de venda? <br /> 
 Com apenas alguns chegando à marca dos 10 mil pedidos, *Iumpica* impressiona com seus mais de 94 mil pedidos somados.
+
+
+
+## Instalação e Configuração
+
+Siga estas etapas para utilizar esse projeto em sua máquina local:
+
+1. Navegue até o diretório que deseja salvar os arquivos do projeto:
+    ```bash
+    cd meu_workspace
+    ```
+
+2. Clone o repositório:
+   ```bash
+   git clone https://github.com/sch-paulo/delivery_center_container.git
+   ```
+
+3. Navegue até o diretório do projeto:
+   ```bash
+   cd delivery_center_container
+   ```
+
+4. Certifique-se de possuir o Docker Desktop instalado em sua máquina:<br>
+  **[Download do Docker Desktop](https://www.docker.com/products/docker-desktop/)**
+<br>
+5. Suba o docker-compose
+    ```bash
+    docker-compose up --build
+    ```
+
+7.
+8
