@@ -1,9 +1,0 @@
-General tab:
-- Name: delivery_center (or any preferred name)
-
-Connection tab:
-- Host name/address: db (Docker service name)
-- Port: 5432
-- Maintenance database: delivery_center
-- Username: postgres
-- Password: postgrespass
